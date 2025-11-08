@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c; /* tema misteri */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.chat-container {
+    display: flex; /* Susun gambar & kotak text tepi-tepi */
+    align-items: flex-start; /* selari bahagian atas */
+    margin: 20px;
+    gap: 20px; /* jarak antara gambar & text */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4d4d; /* logo merah */
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* button merah */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #ff1a1a; /* merah lebih terang bila hover */
+}
+/* Import font tebal dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.text-box {
+    width: 60%;
+    margin: 20px 0 0 20px;
+    padding: 25px; 
+    background-color: #ff4d4d;
+    border: 2px solid #ff1a1a;
+    border-radius: 10px;
+    text-align: left;
+    color: #fff;
+    font-family: 'Anton', sans-serif; /* font tebal dan kuat */
+    font-size: 24px; 
+    font-weight: bold; /* pastikan tebal */
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px #000; /* shadow dramatis */
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+
+/* Hover glow */
+.text-box:hover {
+    box-shadow: 0 0 25px #ff1a1a, 0 0 40px #ff6666;
+    transform: translateY(-3px);
+}
+
+/* Animasi masuk perlahan */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@media screen and (max-width: 600px) {
+    .text-box {
+        width: 90%; /* lebar kotak lebih besar di telefon */
+        margin-left: 10px; /* sedikit jarak kiri */
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .back-button {
+        padding: 8px 15px;
+    }
+}
+.image-box {
+    width: 30px; /* sama dengan lebar kotak teks */
+    margin: 20px 0 0 20px; /* rapat kiri */
+    text-align: center; /* kalau nak gambar di tengah kotak */
+}
+
+.image-box img {
+    width: 60px; /* penuh dalam petak */
+    height: 60px; 
+    border: 2px solid #ff1a1a; /* sempadan merah */
+    border-radius: 10px; /* sudut bulat */
+    object-fit: cover; /* pastikan gambar tidak terdistorsi */
+}
